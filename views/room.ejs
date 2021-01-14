@@ -1,0 +1,51 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  <title> &#127767; moon | instant video call</title>
+  <style>
+    #video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 100%);
+      grid-auto-rows: 300px;
+    }
+    
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">&#127767;</a>
+          <form class="d-flex">
+            <input class="form-control me-2" id="joinLink" type="text" placeholder="join link" aria-label="Search">
+            <button class="btn btn-outline-primary btn-sm" type="submit" onclick="copyLink()">copy</button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-danger" onclick="leave()">leave</button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col" style="padding: 0%;">
+                <div id="video-grid" style="width: 100%; height: 300px; border-radius: 5px;"></div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

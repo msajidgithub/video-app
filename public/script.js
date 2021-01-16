@@ -4,7 +4,7 @@ document.getElementById('joinLink').value = window.location.href
 const myPeer = new Peer({
     secure: true, 
     host: 'moon-call.herokuapp.com', 
-    port: 443,
+    port: 9000,
 });
 const myVideo = document.createElement('video')
 myVideo.muted = true

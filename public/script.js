@@ -1,7 +1,7 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 document.getElementById('joinLink').value = window.location.href
-const myPeer = new Peer('someid', {
+const myPeer = new Peer( userId, {
     secure: true, 
     host: 'moon-call.herokuapp.com', 
     port: 443,

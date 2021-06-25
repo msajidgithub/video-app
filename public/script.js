@@ -1,11 +1,11 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 // document.getElementById('joinLink').value = window.location.href
+// Peer({host:'peerjs-server.herokuapp.com', secure:true, port:443})
 const myPeer = new Peer({
-  key: 'dopplr',
   host: 'new-peer.herokuapp.com',
-  port: '9000',
-  allow_discovery:true
+  port: '443',
+  secure:true
 })
 
 const myVideo = document.createElement('video')

@@ -5,8 +5,7 @@ const myPeer = new Peer({
   key: 'dopplr',
   host: 'new-peer.herokuapp.com',
   port: '9000',
-  path: '/wpc-video',
-  secure: true,
+  allow_discovery:true
 })
 
 const myVideo = document.createElement('video')

@@ -3,7 +3,7 @@ const videoGrid = document.getElementById('video-grid')
 document.getElementById('joinLink').value = window.location.href
 const myPeer = new Peer({
   key: 'peerjs',
-  host: 'zoom-peer1.herokuapp.com',
+  host: 'new-peer.herokuapp.com',
   port: '9000',
   path: '/',
   secure: true,

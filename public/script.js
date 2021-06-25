@@ -1,6 +1,6 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-document.getElementById('joinLink').value = window.location.href
+// document.getElementById('joinLink').value = window.location.href
 const myPeer = new Peer({
   key: 'peerjs',
   host: 'new-peer.herokuapp.com',
